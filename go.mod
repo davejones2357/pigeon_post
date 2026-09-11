@@ -1,3 +1,3 @@
-module github.com/davejones2357/pigeon_post
+module pigeon_post
 
 go 1.26.2
