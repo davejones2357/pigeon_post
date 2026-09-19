@@ -8,6 +8,7 @@ import (
 
 type Config struct {
 	Protocol string `json:"protocol"`
+	Host     string `json:"host"`
 	Port     string `json:"port"`
 }
 
