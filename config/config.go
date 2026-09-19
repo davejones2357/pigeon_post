@@ -1,34 +1,29 @@
 package config
 
 import (
-    "encoding/json"
-    "fmt"
-    "os"
+	"encoding/json"
+	"fmt"
+	"os"
 )
 
 type Config struct {
-    Protocol string `json:"protocol"`
-    Port     string `json:"port"`
+	Protocol string `json:"protocol"`
+	Port     string `json:"port"`
 }
 
-func Load(path string) (*Config, error) {
-    data, err := os.ReadFile(path)
-    if err != nil {
-        return nil, fmt.Errorf("cannot read config file: %w", err)
-    }
+const configFile = "config.json"
 
-    var cfg Config
-    if err := json.Unmarshal(data, &cfg); err != nil {
-        return nil, fmt.Errorf("invalid config JSON: %w", err)
-    }
+func Load() (*Config, error) {
+	data, err := os.ReadFile(configFile)
+	if err != nil {
+		return nil, fmt.Errorf("cannot read %s: %w", configFile, err)
+	}
 
-    // Minimal validation
-    if cfg.Protocol == "" {
-        return nil, fmt.Errorf("missing required field: protocol")
-    }
-    if cfg.Port == "" {
-        return nil, fmt.Errorf("missing required field: port")
-    }
+	var cfg Config
 
-    return &cfg, nil
+	if err := json.Unmarshal(data, &cfg); err != nil {
+		return nil, fmt.Errorf("invalid config JSON: %w", err)
+	}
+
+	return &cfg, nil
 }
