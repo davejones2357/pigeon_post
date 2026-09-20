@@ -1,7 +1,7 @@
 package protocol
 
 import (
-    "errors"
+    "fmt"
     "strings"
 )
 
@@ -39,7 +39,7 @@ func Serialize(msg SimpleMessage) ([]byte, int) {
 // Deserialize converts raw bytes into a SimpleMessage
 func Deserialize(data []byte) (SimpleMessage, error) {
     if len(data) < HeaderSize {
-        return SimpleMessage{}, errors.New("message too short to contain header")
+        return SimpleMessage{}, fmt.Errorf("message (%d bytes) too short to contain header (%d bytes)", len(data), HeaderSize)
     }
 
     mt := strings.TrimSpace(string(data[0:MsgTypeSize]))
