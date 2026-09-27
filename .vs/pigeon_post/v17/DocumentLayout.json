@@ -1,0 +1,65 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\mervi\\source\\repos\\davejones2357\\pigeon_post\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\mervi\\source\\repos\\davejones2357\\pigeon_post\\types\\types.go||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:types\\types.go||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\mervi\\source\\repos\\davejones2357\\pigeon_post\\protocol\\protocol.go||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:protocol\\protocol.go||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "types.go",
+              "DocumentMoniker": "C:\\Users\\mervi\\source\\repos\\davejones2357\\pigeon_post\\types\\types.go",
+              "RelativeDocumentMoniker": "types\\types.go",
+              "ToolTip": "C:\\Users\\mervi\\source\\repos\\davejones2357\\pigeon_post\\types\\types.go",
+              "RelativeToolTip": "types\\types.go",
+              "ViewState": "AgIAACwAAADANDMzM3MvwDYAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-09-19T21:50:39.647Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "protocol.go",
+              "DocumentMoniker": "C:\\Users\\mervi\\source\\repos\\davejones2357\\pigeon_post\\protocol\\protocol.go",
+              "RelativeDocumentMoniker": "protocol\\protocol.go",
+              "ToolTip": "C:\\Users\\mervi\\source\\repos\\davejones2357\\pigeon_post\\protocol\\protocol.go",
+              "RelativeToolTip": "protocol\\protocol.go",
+              "ViewState": "AgIAACgAAABAzczMzIwjwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-09-19T21:50:25.456Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -8,11 +8,12 @@ import (
 )
 
 const (
-    CmdConnect = "CONNECT"
-    CmdSend    = "SEND"
-    CmdPing    = "PING"
-    CmdPong    = "PONG"
-    CmdQuit    = "QUIT"
+    CmdConnect  = "CONNECT"
+    CmdConnected= "CONNECTED"
+    CmdSend     = "SEND"
+    CmdPing     = "PING"
+    CmdPong     = "PONG"
+    CmdQuit     = "QUIT"
 )
 
 // Command is the generic interface for network commands.
@@ -37,6 +38,23 @@ func (c Connect) ToMessage() protocol.SimpleMessage {
         Message:     "",
     }
 }
+
+// Connected represents: CONNECTED <client_id> <OK Message>
+type Connected struct {
+    ID      string
+    Welcome string
+}
+func NewConnected(id string) Connected { return Connected{ID: strings.TrimSpace(id), Welcome: "OK"} }
+func (c Connected) Type() string     { return CmdConnected }
+func (c Connected) ClientID() string { return c.ID }
+func (c Connected) ToMessage() protocol.SimpleMessage {
+    return protocol.SimpleMessage{
+        MessageType: CmdConnected,
+        ClientID:    c.ID,
+        Message:     c.Welcome,
+    }
+}
+
 
 // Send represents: SEND <payload>
 type Send struct {
