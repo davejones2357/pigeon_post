@@ -4,7 +4,7 @@ import (
     "fmt"
     "strings"
 
-    "pigeon_post/protocol"
+    "github.com/davejones2357/pigeon_post/protocol"
 )
 
 const (
@@ -14,6 +14,7 @@ const (
     CmdPing     = "PING"
     CmdPong     = "PONG"
     CmdQuit     = "QUIT"
+    CmdError    = "ERROR"
 )
 
 // Command is the generic interface for network commands.
@@ -126,6 +127,26 @@ func (q Quit) ToMessage() protocol.SimpleMessage {
         MessageType: CmdQuit,
         ClientID:    q.ID,
         Message:     "",
+    }
+}
+
+// Error represents: ERROR <client_id> <message>
+type Error struct {
+    ID      string
+    Message string
+}
+
+func NewError(id, message string) Error {
+    return Error{ID: strings.TrimSpace(id), Message: message}
+}
+
+func (e Error) Type() string     { return CmdError }
+func (e Error) ClientID() string { return e.ID }
+func (e Error) ToMessage() protocol.SimpleMessage {
+    return protocol.SimpleMessage{
+        MessageType: CmdError,
+        ClientID:    e.ID,
+        Message:     e.Message,
     }
 }
 
